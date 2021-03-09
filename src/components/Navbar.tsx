@@ -16,7 +16,7 @@ export default function Navbar() {
         <div>
             <nav className={styles["navbar"]}>
                 <div className={styles["navbar__container"]}>
-                    <Link href="/" >
+                    <Link href="wancla.vercel.app" >
                         <a id={styles["navbar__logo"]}><i className="fab fa-d-and-d"></i> BLOG</a>
                     </Link>                    
                     <div className={styles["navbar__toggle"]} id={styles["mobile-menu"]} onClick={showMenu}>
@@ -26,7 +26,7 @@ export default function Navbar() {
                     </div>
                     <ul className={menu ? "navbar__menu active" : "navbar__menu"}>
                         <li className={styles["navbar__item"]}>
-                            <Link href="/">
+                            <Link href="wancla.vercel.app">
                                 <a className={styles["navbar__links"]}>Home</a>
                             </Link>
                         </li>
