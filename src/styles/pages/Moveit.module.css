@@ -13,7 +13,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 6.25rem; /*6.25rem = 100px*/
-    align-content: center;
+    align-content: center;    
     
-    
+}
+@media screen and (max-width: 768px){
+    .container{
+              
+    }
+    .container section {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
 }

@@ -1,3 +1,14 @@
+@media screen and (max-width: 768px){
+    .profileContainer > img {
+        width: auto;
+        height: auto;
+        margin-top: 3rem;
+    }
+    .profileContainer > div {
+        margin-top: 1rem;
+    }
+    
+}
 .profileContainer {
     display: flex;
     align-items: center;

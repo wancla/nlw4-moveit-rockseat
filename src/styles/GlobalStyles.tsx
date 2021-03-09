@@ -42,6 +42,7 @@ export default createGlobalStyle `
         html {
             font-size: 87.5%; /* reduz 1 pixel*/
         }
+        .
     }
 
     body {
@@ -62,7 +63,8 @@ export default createGlobalStyle `
     .toggleButton {
         display: flex; 
         float: right;
-		margin: 1.5rem;
+        justify-content: space-between;
+		    
         
     }
     .navbar__menu {

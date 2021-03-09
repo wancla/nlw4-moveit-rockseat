@@ -31,12 +31,12 @@ export default function Navbar() {
                             </Link>
                         </li>
                         <li className={styles["navbar__item"]}>
-                            <Link href="#">
+                            <Link href="/">
                                 <a className={styles["navbar__links"]}>Conhecimentos</a>
                             </Link>                            
                         </li>
                         <li className={styles["navbar__item"]}>
-                            <Link href="/">
+                            <Link href="https://wancla.vercel.app/#portfolio">
                                 <a className={styles["navbar__links"]}>Portfólio</a>
                             </Link>                            
                         </li>
