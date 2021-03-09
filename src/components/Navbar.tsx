@@ -8,31 +8,49 @@ interface Props {
 }
 
 export default function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);
-    /**
-   * 
-   * Declaração do tema da aplicação
-   */
+    const [menu, setMenu] = useState(false); 
+
+    const showMenu = () => setMenu(!menu);
 
     return (
         <div>
-            <div className={styles.navbarContainer}>
-                <Link href="/">
-                    <a className={styles.logo}>
-                        React<span>.js</span>
-                    </a>
-                </Link>
-                <div className={styles.hamburguer}>          
-                    <span/>
-                    <span/>
-                    <span/>
+            <nav className={styles["navbar"]}>
+                <div className={styles["navbar__container"]}>
+                    <Link href="/" >
+                        <a id={styles["navbar__logo"]}><i className="fab fa-d-and-d"></i> BLOG</a>
+                    </Link>                    
+                    <div className={styles["navbar__toggle"]} id={styles["mobile-menu"]} onClick={showMenu}>
+                        <span className={styles["bar"]}></span> 
+                        <span className={styles["bar"]}></span>
+                        <span className={styles["bar"]}></span>
+                    </div>
+                    <ul className={menu ? "navbar__menu active" : "navbar__menu"}>
+                        <li className={styles["navbar__item"]}>
+                            <Link href="/">
+                                <a className={styles["navbar__links"]}>Home</a>
+                            </Link>
+                        </li>
+                        <li className={styles["navbar__item"]}>
+                            <Link href="#">
+                                <a className={styles["navbar__links"]}>Conhecimentos</a>
+                            </Link>                            
+                        </li>
+                        <li className={styles["navbar__item"]}>
+                            <Link href="/">
+                                <a className={styles["navbar__links"]}>Portfólio</a>
+                            </Link>                            
+                        </li>
+                        {/**
+                         * <li className={styles["navbar__btn"]}>
+                            <Link href="/" >
+                                <a className={styles["button"]}>Sign Up</a>
+                            </Link>
+                        </li> 
+                         * 
+                         */}                        
+                    </ul>
                 </div>
-                <div className="menu" >
-                    <Link  href="/"><a className={styles.menuLink}>Home</a></Link>
-                    <Link href="/moveit"><a className={styles.menuLink}>Move it</a></Link> 
-                    <Link href="/sobre"><a className={styles.menuLink}>Sobre</a></Link>   
-                </div> 
-            </div> 
+            </nav>
         </div>
     )
 }

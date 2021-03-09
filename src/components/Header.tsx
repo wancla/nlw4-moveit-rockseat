@@ -1,13 +1,16 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Navbar from './Navbar'
 import Switch from "react-switch";
 import {ThemeContext} from 'styled-components'
 
 import styles from '../styles/components/Header.module.css'
+import Cookies from 'js-cookie';
 
 interface Props {
     toggleTheme(): void;
+
 }
+
 
 export default function Header({toggleTheme}) {
     const {title} = useContext(ThemeContext);
@@ -22,10 +25,10 @@ export default function Header({toggleTheme}) {
                 checkedIcon={false}
                 uncheckedIcon={false}
                 height={10}
-                width={40}
-                handleDiameter={20}
-                offHandleColor="#fff"
-                onHandleColor="#333"
+                width={20}
+                handleDiameter={15}
+                offHandleColor="#8257e6"
+                onHandleColor="#"
                 onColor="#fff"
                 offColor="#333"                            
                         
